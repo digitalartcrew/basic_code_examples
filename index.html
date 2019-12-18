@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .rel_child_one {
+      background-color: red;
+      height: 100px;
+      width: 100px;
+      position: relative;
+    }
+
+    .rel_child_two {
+      background-color: blue;
+      height: 100px;
+      width: 100px;
+      position: relative;
+      /* moved 20px from it's original position (normal flow) */
+      left: 20px; 
+    }
+
+    .abs_child_one {
+      background-color: green;
+      height: 100px;
+      width: 100px;
+      position: absolute;
+    }
+
+    .abs_child_two {
+      background-color: yellow;
+      height: 100px;
+      width: 100px;
+      /* moved 20px from actual left (out of flow) */
+      position: absolute;
+      left: 20px;
+    }
+
+    .clear_one {
+      background-color: coral;
+      height: 100px;
+      width: 100px;
+      float: right;
+    }
+
+    .clear_two {
+      background-color: purple;
+      height: 100px;
+      width: 100px;
+      clear: both;
+    }
+
+    .clear_three {
+      background-color: aqua;
+      height: 100px;
+      width: 100px;
+    }
+
+    .clear_four {
+      background-color: darkolivegreen;
+      height: 100px;
+      width: 100px;
+    }
+
+    .parent_two {
+      margin-bottom: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent_one">
+    <h1>Position Example</h1>
+    <!-- Falls in natural order -->
+    <div class="rel_child_one"></div>
+    <div class="rel_child_two"></div>
+  </div>
+  <div class="parent_two">
+    <!-- Starts at the parent  -->
+    <div class="abs_child_one"></div>
+    <div class="abs_child_two"></div>
+  </div>
+
+  <div class="parent_three">
+    <h1>Clear Example</h1>
+    <div class="clear_one"></div>
+    <div class="clear_two"></div>
+    <div class="clear_three"></div>
+    <div class="clear_four"></div>
+  </div>
+</body>
+</html>
